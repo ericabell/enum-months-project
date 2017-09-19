@@ -1,7 +1,11 @@
 package com.example;
 
 import com.example.common.Month;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -52,5 +56,21 @@ public class Main {
                 months.add("No matching month!");
         }
         System.out.println(months);
+
+
+        // EXTRAS
+
+        File newFile = new File("may.json");
+
+        try {
+            FileWriter fileWriter = new FileWriter(newFile);
+            ObjectMapper mapper = new ObjectMapper();
+            String json = mapper.writeValueAsString(Month.MAY);
+            fileWriter.write(json);
+            fileWriter.close();
+        } catch (IOException ex) {
+            System.out.println(ex);
+        }
+
     }
 }
