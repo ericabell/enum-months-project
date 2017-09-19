@@ -1,5 +1,7 @@
 package com.example.common;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+
 public enum Month {
     JANUARY ("January"),
     FEBRUARY ("February"),
@@ -21,6 +23,7 @@ public enum Month {
         this.englishName = englishName;
     }
 
+    @JsonValue
     public String getEnglishName() {
         return englishName;
     }
