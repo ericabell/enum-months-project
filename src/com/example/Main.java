@@ -20,33 +20,36 @@ public class Main {
 
         String input = scanner.nextLine();
 
-        ArrayList<Month> months = new ArrayList<Month>();
+        ArrayList<String> months = new ArrayList<String>();
 
         switch(input) {
             case "January":
-                months.add(Month.JANUARY);
+                months.add(Month.JANUARY.getEnglishName());
             case "February":
-                months.add(Month.FEBRUARY);
+                months.add(Month.FEBRUARY.getEnglishName());
             case "March":
-                months.add(Month.MARCH);
+                months.add(Month.MARCH.getEnglishName());
             case "April":
-                months.add(Month.APRIL);
+                months.add(Month.APRIL.getEnglishName());
             case "May":
-                months.add(Month.MAY);
+                months.add(Month.MAY.getEnglishName());
             case "June":
-                months.add(Month.JUNE);
+                months.add(Month.JUNE.getEnglishName());
             case "July":
-                months.add(Month.JULY);
+                months.add(Month.JULY.getEnglishName());
             case "August":
-                months.add(Month.AUGUST);
+                months.add(Month.AUGUST.getEnglishName());
             case "September":
-                months.add(Month.SEPTEMBER);
+                months.add(Month.SEPTEMBER.getEnglishName());
             case "October":
-                months.add(Month.OCTOBER);
+                months.add(Month.OCTOBER.getEnglishName());
             case "November":
-                months.add(Month.NOVEMBER);
+                months.add(Month.NOVEMBER.getEnglishName());
             case "December":
-                months.add(Month.DECEMBER);
+                months.add(Month.DECEMBER.getEnglishName());
+                break;
+            default:
+                months.add("No matching month!");
         }
         System.out.println(months);
     }
